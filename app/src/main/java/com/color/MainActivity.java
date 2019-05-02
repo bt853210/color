@@ -1,7 +1,9 @@
 package com.color;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -23,9 +25,25 @@ public class MainActivity extends AppCompatActivity {
         txv = findViewById(R.id.textView6);
     }
 
-    public void changeClor(View v){
+    public void changeColor(View v){
         Random x = new Random();
 
-        int red = x.next
+        int red = x.nextInt( 256);
+        txvR.setText("RED:"+ red);
+        txvR.setTextColor(Color.rgb(red,0,0));
+
+        int green = x.nextInt( 256);
+        txvG.setText("GREEN:"+ green);
+        txvG.setTextColor(Color.rgb(0,green,0));
+
+        int blue = x.nextInt( 256);
+        txvB.setText("BLUE:"+ blue);
+        txvB.setTextColor(Color.rgb(0,0,blue));
+
+        text += red + "," + green + "," + blue + "\n";
+        txv.setTextSize(16);
+        txv.setText(text);
+        txv.setMovementMethod(new ScrollingMovementMethod());
+        txv.setBackgroundColor(Color.rgb(red,green,blue));
     }
 }
