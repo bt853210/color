@@ -4,4 +4,8 @@
     <color name="orange">#CD7E4C</color>
     <color name="blue2">#BB3542D7</color>
     <color name="red">#BF00</color>
+
+    <drawable name="darkgray">#808080FF</drawable>
+    <drawable name="white">#FFFFFFFF</drawable>
+    <drawable name="transpart_baclground">#a0000000</drawable>
 </resources>
